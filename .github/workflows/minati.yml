@@ -1,0 +1,33 @@
+name: Pling File Downloader
+
+on:
+#  release:
+#    types: [published]
+#  push:
+#    branches:
+#      - master
+#    paths:
+#      - '.config'
+#  schedule:
+#    - cron: 0 8 * * 5
+  watch:
+    types: [started]
+
+env:
+  TZ: Asia/Kolkata
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+       - name: Checkout
+         uses: actions/checkout@master
+             
+       - name: Fetching/Downloading Files & Looping Automation
+         run: |
+             sudo -E apt-get -qq update
+             sudo apt-get install python-pip
+             sudo -H pip install --upgrade pip
+             sudo -H pip install wget os sys
+             sudo python3 trigger.py
