@@ -1,4 +1,4 @@
-name: Pling File Downloader
+name: File Downloader
 
 on:
 #  release:
@@ -31,4 +31,5 @@ jobs:
              sudo -H pip install --upgrade pip
              sudo -H pip install wheel
              sudo -H pip install wget
-             sudo python trigger.py
+             chmod +x download.sh
+             bash download.sh
