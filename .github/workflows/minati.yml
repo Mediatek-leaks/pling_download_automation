@@ -29,5 +29,5 @@ jobs:
              sudo -E apt-get -qq update
              sudo apt-get install python-pip
              sudo -H pip install --upgrade pip
-             sudo -H pip install wget os sys
+             sudo -H pip install wget
              sudo python3 trigger.py
