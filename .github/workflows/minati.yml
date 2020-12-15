@@ -27,8 +27,9 @@ jobs:
        - name: Fetching/Downloading Files & Looping Automation
          run: |
              sudo -E apt-get -qq update
-             sudo apt-get install python-pip
+             sudo -H apt install python3
+             sudo apt-get install python3-pip
              sudo -H pip install --upgrade pip
              sudo -H pip install wheel
              sudo -H pip install wget
-             sudo python trigger.py
+             sudo python3 trigger.py
