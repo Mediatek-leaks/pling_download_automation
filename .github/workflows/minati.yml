@@ -29,5 +29,6 @@ jobs:
              sudo -E apt-get -qq update
              sudo apt-get install python-pip
              sudo -H pip install --upgrade pip
-             sudo -H pip install wheel wget
-             sudo python3 trigger.py
+             sudo -H pip install wheel
+             sudo -H pip install wget
+             sudo python trigger.py
